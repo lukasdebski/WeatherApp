@@ -1,0 +1,17 @@
+@import '../../styles/mixins';
+
+@mixin mobile {
+  .App-header {
+    background-color: red;
+  }
+}
+@mixin tablet {
+  .App-header {
+    background-color: blue;
+  }
+}
+@mixin desktop {
+  .App-header {
+    background-color: green;
+  }
+}
