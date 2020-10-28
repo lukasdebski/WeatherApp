@@ -1,5 +1,6 @@
 @import "./styles/reset";
 @import "./styles/fonts";
+@import './styles/mixins';
 
 body {
   margin: 0;
@@ -10,4 +11,25 @@ body {
 
 code {
   font-family: $code-fonts;
+}
+
+@include mobile {
+  .App {
+    background-image: url("./assets/clouds-640.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@include tablet {
+  .App {
+    background-image: url("./assets/clouds-1280.jpg");
+  }
+}
+
+@include desktop {
+  .App {
+    background-image: url("./assets/clouds-1920.jpg");
+  }
 }

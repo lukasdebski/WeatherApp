@@ -5,7 +5,7 @@ import "./Header.scss"
 const Header = () => {
     return (
         <header className="App-header">
-            <h1>Lukasz, brawo! Dziala!!! :)</h1>
+            <h1>Strona w budowie! :)</h1>
         </header>
     );
 };
