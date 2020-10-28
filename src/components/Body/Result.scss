@@ -1,0 +1,25 @@
+.result__element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.element--el {
+  font-size: 22px;
+  margin: 5px 0;
+}
+
+.el--city {
+  //align-self: center;
+  display: block;
+  margin: 10px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.el--temp {
+  //align-self: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+}

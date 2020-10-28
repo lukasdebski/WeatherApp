@@ -1,0 +1,24 @@
+@import "../../styles/mixins";
+
+@include mobile {
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header__input {
+    width: 80%;
+    margin: 20px;
+    padding:20px;
+    font-size: 26px;
+  }
+  .header__btn {
+    //width: 200px;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 9px;
+    background-color: #fff;
+  }
+}
