@@ -3,7 +3,7 @@ import "./Result.scss";
 
 const Result = props => {
 
-    const {date, time, feels, description, icon, humidity, city, sunrise, sunset, temp, tempMin, tempMax, pressure, wind, err} = props.weather;
+    const {time, feels, description, icon, humidity, city, sunrise, sunset, temp, tempMin, tempMax, pressure, wind, err} = props.weather;
 
     // wyswietli pusta informacje poniewaz null.
     let content = null;
@@ -16,6 +16,7 @@ const Result = props => {
         const tempMinRound = Math.round(tempMin);
         const tempMaxRound = Math.round(tempMax);
         const feelsRound = Math.round(feels)
+        const iconWeather = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
         content = (
             <div className='result__element'>
@@ -23,11 +24,10 @@ const Result = props => {
                 <div className='element--el el--temp'><span className='el-temp'>{tempRound} &#176;C</span></div>
                 <div className='element--el'>min: {tempMinRound} &#176;C</div>
                 <div className='element--el'>max: {tempMaxRound} &#176;C</div>
-                <div className='element--el'>data: {date}</div>
+                <div className='element--el'><img className='icon' src={iconWeather}/></div>
                 <div className='element--el'>{description}</div>
-                <div className='element--el'>ikonka: {icon}</div>
                 <div className='element--el'>godzina: {time}</div>
-                <div className='element--el'>odczuwalna temp: {feelsRound} &#176;C</div>
+                <div className='element--el'>odczuwalna: {feelsRound} &#176;C</div>
                 <div className="element--el">wilgotność: {humidity} %</div>
                 <div className='element--el'>Wschód slońca: {sunriseTime}</div>
                 <div className='element--el'>Zachód slońca: {sunsetTime}</div>

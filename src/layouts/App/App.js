@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.scss';
+import NavTop from "../../components/NavTop/NavTop";
 import Header from '../../components/Header/Header';
 import Form from "../../components/Header/Form";
 import Result from "../../components/Body/Result";
@@ -87,6 +88,7 @@ class App extends Component {
             <>
                 <div className="App">
                     <div className="App__container">
+                        <NavTop weather={this.state}/>
                         <Header/>
                         <Form value={this.state.value}
                               change={this.handleInputChange}
