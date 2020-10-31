@@ -3,6 +3,7 @@ import './App.scss';
 import Header from '../../components/Header/Header';
 import Form from "../../components/Header/Form";
 import Result from "../../components/Body/Result";
+import Footer from '../../components/Footer/Footer';
 
 class App extends Component {
 
@@ -84,6 +85,7 @@ class App extends Component {
                               submit={this.handleCitySubmit}
                         />
                         <Result weather={this.state}/>
+                        <Footer/>
                     </div>
                 </div>
             </>
