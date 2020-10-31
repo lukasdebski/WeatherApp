@@ -11,12 +11,16 @@ class App extends Component {
         value: '',
         date: '',
         feels: '',
+        description: '',
+        icon: '',
         time: '',
         humidity: '',
         city: '',
         sunrise: '', // wshod
         sunset: '', // zachod
         temp: '',
+        tempMin: '',
+        tempMax: '',
         pressure: '',
         wind: '',
         err: false,
@@ -33,7 +37,7 @@ class App extends Component {
     handleCitySubmit = (e) => {
         e.preventDefault();
         // console.log('zapytanie...')
-        const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=15c11e0907b11a6332c8aed3de1d5753&units=metric`;
+        const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=15c11e0907b11a6332c8aed3de1d5753&units=metric&lang=pl`;
 
         fetch(API)
             // response.ok - zwroci nam true if true, zwroci false jesli not true.
@@ -52,10 +56,14 @@ class App extends Component {
                     // prev - aktualny obiekt state.
                     date: date,
                     time: time,
+                    description: data.weather[0].description,
+                    icon: data.weather[0].icon,
                     city: prev.value,
                     sunrise: data.sys.sunrise, // wshod
                     sunset: data.sys.sunset, // zachod
                     feels: data.main.feels_like,
+                    tempMin: data.main.temp_min,
+                    tempMax: data.main.temp_max,
                     humidity: data.main.humidity,
                     temp: data.main.temp,
                     pressure: data.main.pressure,

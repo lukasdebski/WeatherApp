@@ -26,11 +26,17 @@ code {
 @include tablet {
   .App {
     background-image: url("./assets/clouds-1280.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }
 
 @include desktop {
   .App {
     background-image: url("./assets/clouds-1920.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }

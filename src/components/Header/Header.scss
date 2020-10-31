@@ -3,7 +3,10 @@
 @include mobile {
 
   .App-header {
-      //border: 1px solid black;
+      .header__title {
+        padding-top: 5px;
+        font-size: 26px;
+      }
   }
 }
 @include tablet {
