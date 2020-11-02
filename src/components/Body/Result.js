@@ -3,7 +3,7 @@ import "./Result.scss";
 
 const Result = props => {
 
-    const {time, feels, description, icon, humidity, city, sunrise, sunset, temp, tempMin, tempMax, pressure, wind, err} = props.weather;
+    const {feels, description, icon, humidity, city, sunrise, sunset, temp, tempMin, tempMax, pressure, wind, err} = props.weather;
 
     // wyswietli pusta informacje poniewaz null.
     let content = null;
@@ -34,7 +34,7 @@ const Result = props => {
                         <div className='result__el box--el'>max: {tempMaxRound} &#176;C</div>
                     </div>
                     <div className='result__element'>
-                        <img className='result__el icon--el' src={iconWeather}/>
+                        <img className='result__el icon--el' src={iconWeather} alt=''/>
                         <div className='result__el'>{description}</div>
                     </div>
                 </div>
