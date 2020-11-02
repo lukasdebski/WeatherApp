@@ -19,20 +19,35 @@ const Result = props => {
         const iconWeather = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
         content = (
-            <div className='result__element'>
-                <div className='element--el'>Informacje pogodowe dla: <span className='el--city'>{city}</span></div>
-                <div className='element--el el--temp'><span className='el-temp'>{tempRound} &#176;C</span></div>
-                <div className='element--el'>min: {tempMinRound} &#176;C</div>
-                <div className='element--el'>max: {tempMaxRound} &#176;C</div>
-                <div className='element--el'><img className='icon' src={iconWeather}/></div>
-                <div className='element--el'>{description}</div>
-                <div className='element--el'>godzina: {time}</div>
-                <div className='element--el'>odczuwalna: {feelsRound} &#176;C</div>
-                <div className="element--el">wilgotność: {humidity} %</div>
-                <div className='element--el'>Wschód slońca: {sunriseTime}</div>
-                <div className='element--el'>Zachód slońca: {sunsetTime}</div>
-                <div className='element--el'>ciśnienie: {pressure} hPa</div>
-                <div className='element--el'>siła wiatru: {wind} m/s</div>
+            <div className='result__container'>
+
+                <div className="result__element">
+                    <div className='result__el el--info'>Informacje pogodowe dla:</div>
+                    <div className='result__el el--city'>{city}</div>
+                </div>
+
+                <div className="result__element">
+                    <div className='result__el el--temp'>{tempRound} &#176;C</div>
+                    <div className='result__el el--info'>odczuwalna: {feelsRound} &#176;C</div>
+                    <div className="result__box">
+                        <div className='result__el box--el'>min: {tempMinRound} &#176;C</div>
+                        <div className='result__el box--el'>max: {tempMaxRound} &#176;C</div>
+                    </div>
+                    <div className='result__element'>
+                        <img className='result__el icon--el' src={iconWeather}/>
+                        <div className='result__el'>{description}</div>
+                    </div>
+                </div>
+
+                <div className="result__elements">
+                    <div className="result__box">
+                        <div className='result__el el--sun'><i className="fas fa-sort-up"></i><i className="far fa-sun"></i> {sunriseTime}</div>
+                        <div className='result__el el--sun'><i className="far fa-sun"></i><i className="fas fa-sort-down"></i> {sunsetTime}</div>
+                    </div>
+                    <div className='result__el el--sun'>ciśnienie: {pressure} hPa</div>
+                    <div className="result__el el--sun">wilgotność: {humidity} %</div>
+                    <div className='result__el el--wind el--sun'><i className="fas fa-wind"></i> {wind} m/s</div>
+                </div>
             </div>
         )
     }

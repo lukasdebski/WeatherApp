@@ -1,21 +1,25 @@
 @import "../../styles/mixins";
 
-@include mobile {
-
   .App-header {
       .header__title {
         padding-top: 5px;
-        font-size: 26px;
+        font-size: 24px;
       }
   }
-}
+
 @include tablet {
   .App-header {
-    //background-color: tomato;
+    .header__title {
+      padding-top: 5px;
+      font-size: 28px;
+    }
   }
 }
 @include desktop {
   .App-header {
-    //background-color: cornflowerblue;
+    .header__title {
+      padding-top: 5px;
+      font-size: 32px;
+    }
   }
 }

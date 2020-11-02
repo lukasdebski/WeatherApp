@@ -50,13 +50,9 @@ class App extends Component {
             })
             .then(response => response.json())
             .then(data => {
-
-
                 // przekazuje funckje ktora zwroci nam obiekt z aktualnymi danymi.
                 this.setState(prev => ({
                     // prev - aktualny obiekt state.
-                    // date: date,
-                    // time: time,
                     description: data.weather[0].description,
                     icon: data.weather[0].icon,
                     city: prev.value,

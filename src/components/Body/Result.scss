@@ -1,33 +1,71 @@
-.result__element {
+.result__container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin-top: 20px;
 }
 
-.element--el {
-  font-size: 22px;
-  margin: 5px 0;
+.result__element {
+  margin: 10px 0;
+}
+
+.result__el {
+  font-size: 20px;
 }
 
 .el--city {
-  //align-self: center;
-  display: block;
-  margin: 10px;
+  margin: 10px 0;
   font-size: 40px;
-  text-transform: uppercase;
+  border-bottom: 2px solid white;
 }
 
 .el--temp {
-  //align-self: center;
-  font-size: 50px;
-  margin-bottom: 20px;
+  font-size: 60px;
 }
 
-//@include tablet {
-//
-//}
-//
-//@include desktop {
-//
-//}
+.result__box {
+  display: flex;
+  .box--el {
+    padding: 5px 10px;
+  }
+}
+
+.icon--el {
+  width: 150px;
+  height: 150px;
+}
+
+.result__elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.el--sun {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:10px 20px;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 15%;
+  .fa-sun {
+    font-size: 30px;
+  }
+}
+
+.el--wind {
+  flex-direction: column;
+  border: 2px solid white;
+}
+.fa-wind {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+
+
+
+

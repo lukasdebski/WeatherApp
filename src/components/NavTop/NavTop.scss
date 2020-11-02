@@ -1,7 +1,6 @@
 @import "../../styles/mixins";
 
 .navtop {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,10 +10,6 @@
 }
 
 .el--center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 14px;
 }
 
@@ -25,11 +20,16 @@
 
 @include tablet {
   .navtop {
+    position: relative;
     padding: 5px 20px;
     font-size: 14px;
   }
 
   .el--center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 16px;
   }
 
@@ -40,11 +40,16 @@
 
 @include desktop {
   .navtop {
+    position: relative;
     padding: 5px 20px;
     font-size: 16px;
   }
 
   .el--center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 18px;
   }
 
