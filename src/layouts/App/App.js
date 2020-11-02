@@ -50,13 +50,13 @@ class App extends Component {
             })
             .then(response => response.json())
             .then(data => {
-                const date = new Date().toLocaleDateString();
-                const time = new Date().toLocaleTimeString();
+
+
                 // przekazuje funckje ktora zwroci nam obiekt z aktualnymi danymi.
                 this.setState(prev => ({
                     // prev - aktualny obiekt state.
-                    date: date,
-                    time: time,
+                    // date: date,
+                    // time: time,
                     description: data.weather[0].description,
                     icon: data.weather[0].icon,
                     city: prev.value,

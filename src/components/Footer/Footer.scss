@@ -5,7 +5,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 5px 0;
+  //padding: 2px 0;
   background-color: rgba(0, 0, 0, .5);
 }
 
@@ -20,23 +20,23 @@
 
 @include tablet {
   .footer__text {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .copy {
     font-size: 24px;
-    vertical-align: -1px;
+    vertical-align: -2px;
   }
 }
 
 @include desktop {
   .footer__text {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .copy {
-    font-size: 30px;
-    vertical-align: -1px;
+    font-size: 26px;
+    vertical-align: -2px;
   }
 }
 

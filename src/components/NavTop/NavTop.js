@@ -1,20 +1,30 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './NavTop.scss';
+import ClockTime from "./date";
 
-const NavTop = props => {
+export default class NavTop extends Component {
+    state = {
+        state: new Date(),
+    }
 
-    const {date} = props.weather;
 
-    // const date = new Date().toLocaleDateString();
+    componentDidMount() {
+        this.intervalId = setInterval(() => {
+            this.setState(() => {
+                return {
+                    state: new Date(),
+                }
+            })
+        }, 1000)
+    }
 
-    return (
-        <section className='navtop'>
-            <div className='navtop__el'>{date}</div>
-            <div className='navtop__el'>
+    render() {
+        const {state} = this.state;
+        return(
+            <>
+                <ClockTime date={state}/>
+            </>
+        )
+    }
 
-            </div>
-        </section>
-    )
 }
-
-export default NavTop;
