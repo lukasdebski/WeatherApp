@@ -1,3 +1,5 @@
+@import "../../styles/mixins";
+
 .result__container {
   display: flex;
   justify-content: center;
@@ -63,6 +65,139 @@
 .fa-wind {
   font-size: 36px;
   margin-bottom: 10px;
+}
+
+@include tablet {
+  .el--city {
+    font-size: 60px;
+  }
+
+  .el--temp {
+    font-size: 70px;
+  }
+
+  .icon--el {
+    width: 220px;
+    height: 220px;
+  }
+
+  .result__box {
+    display: flex;
+    flex-direction: row;
+    .box--el {
+      font-size: 24px;
+      padding: 5px 20px;
+    }
+  }
+
+  .result__elements {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .el--sun {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 18vw;
+    height: 18vw;
+    margin: 10px 5px;
+    padding: 5px 5px;
+    border: 2px solid white;
+    border-radius: 5%;
+    .fa-sun {
+      font-size: 50px;
+    }
+  }
+
+  .result__el {
+    justify-content: space-around;
+  }
+
+  .el--wind {
+    flex-direction: column;
+  }
+  .fa-wind {
+    font-size: 50px;
+    margin-bottom: 0;
+  }
+}
+
+@include desktop {
+  .result__container {
+    position: relative;
+  }
+  .result__el {
+    font-size: 24px;
+  }
+  .el--city {
+    font-size: 70px;
+  }
+
+  .el--temp {
+    font-size: 70px;
+  }
+
+  .icon--el {
+    width: 250px;
+    height: 250px;
+  }
+
+  .description {
+    margin-bottom: 240px;
+  }
+
+  .result__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .box--el {
+      font-size: 24px;
+      padding: 5px 20px;
+    }
+  }
+
+  .result__elements {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    animation: move 20s linear infinite;
+  }
+
+  .el--sun {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 12vw;
+    height: 12vw;
+    margin: 10px 5px;
+    padding: 5px 5px;
+    border: 2px solid white;
+    border-radius: 5%;
+    background-color: rgba(0,0,0, .4);
+    .fa-sun {
+      font-size: 50px;
+    }
+  }
+
+  .el--wind {
+    flex-direction: column;
+  }
+  .fa-wind {
+    font-size: 50px;
+    margin-bottom: 0;
+  }
+
+  @keyframes move {
+    100% {
+      left: -100%;
+    }
+  }
 }
 
 
