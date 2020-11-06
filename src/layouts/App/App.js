@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {HashRouter, Route, Switch} from 'react-router-dom';
 import './App.scss';
 import NavTop from "../../components/NavTop/NavTop";
 import Header from '../../components/Header/Header';
@@ -12,6 +11,7 @@ import Weather from "../../components/Burger/Weather";
 import Login from "../../components/Burger/Login";
 import Map from "../../components/Burger/Map";
 import AboutMe from "../../components/Burger/AboutMe";
+import {HashRouter, Route, Switch} from 'react-router-dom';
 
 class App extends Component {
 
