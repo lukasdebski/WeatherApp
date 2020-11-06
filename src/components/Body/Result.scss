@@ -23,11 +23,12 @@
 }
 
 .el--temp {
-  font-size: 60px;
+  font-size: 50px;
 }
 
 .result__box {
   display: flex;
+  justify-content: center;
   .box--el {
     padding: 5px 10px;
   }
@@ -45,6 +46,7 @@
 }
 
 .el--sun {
+  width: 140px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,6 +55,7 @@
   padding: 10px 20px;
   border: 2px solid white;
   border-radius: 15%;
+  background-color: rgba(0,0,0, .4);
   .fa-sun {
     font-size: 30px;
   }
@@ -73,7 +76,7 @@
   }
 
   .el--temp {
-    font-size: 70px;
+    font-size: 50px;
   }
 
   .icon--el {
@@ -132,11 +135,11 @@
     font-size: 24px;
   }
   .el--city {
-    font-size: 70px;
+    font-size: 60px;
   }
 
   .el--temp {
-    font-size: 70px;
+    font-size: 50px;
   }
 
   .icon--el {
@@ -179,7 +182,6 @@
     padding: 5px 5px;
     border: 2px solid white;
     border-radius: 5%;
-    background-color: rgba(0,0,0, .4);
     .fa-sun {
       font-size: 50px;
     }

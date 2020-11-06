@@ -9,10 +9,6 @@
   font-size: 12px;
 }
 
-.el--center {
-  font-size: 14px;
-}
-
 .fa-bars {
   font-size: 20px;
   cursor: pointer;
@@ -25,14 +21,6 @@
     font-size: 14px;
   }
 
-  .el--center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 16px;
-  }
-
   .fa-bars {
     font-size: 22px;
   }
@@ -43,14 +31,6 @@
     position: relative;
     padding: 5px 20px;
     font-size: 16px;
-  }
-
-  .el--center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
   }
 
   .fa-bars {

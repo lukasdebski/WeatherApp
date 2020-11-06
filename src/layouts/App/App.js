@@ -1,10 +1,17 @@
 import React, {Component} from 'react';
+import {HashRouter, Route, Switch, NavLink,} from 'react-router-dom';
 import './App.scss';
 import NavTop from "../../components/NavTop/NavTop";
 import Header from '../../components/Header/Header';
 import Form from "../../components/Header/Form";
 import Result from "../../components/Body/Result";
 import Footer from '../../components/Footer/Footer';
+import Menu from '../../components/Burger/Menu';
+import Contact from "../../components/Burger/Contact";
+import Weather from "../../components/Burger/Weather";
+import Login from "../../components/Burger/Login";
+import Map from "../../components/Burger/Map";
+import AboutMe from "../../components/Burger/AboutMe";
 
 class App extends Component {
 
@@ -26,7 +33,6 @@ class App extends Component {
         wind: '',
         err: false,
     }
-
 
 
     handleInputChange = (e) => {
@@ -82,9 +88,18 @@ class App extends Component {
     render() {
         return (
             <>
+                <HashRouter>
                 <div className="App">
                     <div className="App__container">
                         <NavTop weather={this.state}/>
+                        <Menu/>
+                        <Switch>
+                            <Route path='/login' component={Login}/>
+                            <Route path='/weather' component={Weather}/>
+                            <Route path='/map' component={Map}/>
+                            <Route path='/contact' component={Contact}/>
+                            <Route path='/aboutme' component={AboutMe}/>
+                        </Switch>
                         <Header/>
                         <Form value={this.state.value}
                               change={this.handleInputChange}
@@ -94,6 +109,7 @@ class App extends Component {
                         <Footer/>
                     </div>
                 </div>
+                </HashRouter>
             </>
         );
     }

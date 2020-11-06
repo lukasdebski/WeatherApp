@@ -44,8 +44,8 @@ const Result = props => {
                         <div className='result__el el--sun'><i className="fas fa-sort-up"></i><i className="far fa-sun"></i> {sunriseTime}</div>
                         <div className='result__el el--sun'><i className="far fa-sun"></i><i className="fas fa-sort-down"></i> {sunsetTime}</div>
                     </div>
-                    <div className='result__el el--sun'>Ciśnienie: {pressure} hPa</div>
-                    <div className="result__el el--sun">Wilgotność: {humidity} %</div>
+                    <div className='result__el el--sun'>Ciśnienie: <br/> {pressure} hPa</div>
+                    <div className="result__el el--sun">Wilgotność: <br/> {humidity} %</div>
                     <div className='result__el el--wind el--sun'><i className="fas fa-wind"></i> {wind} m/s</div>
                 </article>
             </section>
