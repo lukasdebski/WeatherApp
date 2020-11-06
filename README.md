@@ -35,14 +35,6 @@ Hi everyone! My name is Lukas and this is a personal project built in my spare t
 * react-router-dom
 ```
 
-## Installation
-Use create-react-app
-
-```bash
-npx create-react-app
-npm i react-router-dom --save - inside your project
-```
-
 ## Run it
 ```
 1. Clone it. git clone https://github.com/lukasdebski/WeatherApp.git
