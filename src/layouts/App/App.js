@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {HashRouter, Route, Switch, NavLink,} from 'react-router-dom';
+import {HashRouter, Route, Switch} from 'react-router-dom';
 import './App.scss';
 import NavTop from "../../components/NavTop/NavTop";
 import Header from '../../components/Header/Header';
