@@ -14,12 +14,12 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 260px;
   height: 500px;
   border: 2px solid white;
   border-radius: 15px;
-  background-color: rgba(0,0,0, .4);
+  background-color: rgba(0, 0, 0, .4);
   z-index: 100;
 
   .fa-times {
@@ -37,27 +37,28 @@
     list-style: none;
 
     .menu__item {
+      margin: 15px 0;
+      cursor: pointer;
+    }
+
+    .item--link {
+      display: block;
       width: 160px;
-      margin: 20px 0;
       padding: 7px 25px;
       border: 1px solid white;
       border-radius: 15px;
-      cursor: pointer;
-
-      .item--link {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-      }
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
     }
 
-    .menu__item:hover {
+    .item--link:hover {
       background-color: #fff;
-      color: black;
+      color: #000;
     }
 
     .item--login {
-      margin: 30px 0;
+      margin-bottom: 30px;
       border: 2px solid white;
 
       .fa-user {
